@@ -1,0 +1,30 @@
+#main {
+  border: 2px solid pink;
+  padding: 5px;
+  display: flex;
+
+}
+
+.box{
+  position: relative;
+  border: 1px solid grey;
+  width: 20px;
+  height: 25px;
+  float: left;
+  cursor: pointer;
+  display: block; 
+
+}
+
+.red { background-color: red;}
+.blue { background-color: blue;}
+.yellow { background-color: yellow;} 
+
+
+#button {
+  border: none;
+  padding: 10px; /*espacio alrededor del texto*/
+  background-color: rgb(162, 239, 39); /*color del botón*/
+  color: #000000; /*color del texto*/
+  font-family:'Times New Roman', Times, serif; /*tipografía del texto*/
+}
