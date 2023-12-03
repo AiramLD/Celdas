@@ -12,6 +12,7 @@ var idI = setInterval(function () {
   gameOver();
 }, 1000);
 
+//CREAR LA CAJA
 function createBox() {
   let main = document.getElementById("main");
   let box = document.createElement("div");
@@ -30,6 +31,7 @@ function createBox() {
   main.append(box);
 }
 
+//ELIMINAR
 function remove(box) {
   let color = box.classList[1];
   let group = [box];
@@ -58,7 +60,6 @@ function remove(box) {
 
     // Verificar si has ganado
     if (document.querySelectorAll(".box").length === 0) {
-      // Mostrar mensaje de "Has ganado"
       alert(
         "¡Enhorabuena has ganado, prueba otra vez dando al boton TRY AGAIN!"
       );
@@ -71,20 +72,12 @@ function gameOver() {
   var elements = document.querySelectorAll(".element");
   var lastElement = elements[elements.length - 1];
 
-  //AQUÍ LO HAGO CON EL TAMAÑO DEL DIV
   //----------------------------------------------
   if (elements.length > 0) {
-    // Obtener el ancho total del último elemento, incluyendo márgenes y bordes
     var totalWidthElement = lastElement.offsetWidth;
-
-    // Obtener la posición del último elemento
     var pos = lastElement.getBoundingClientRect();
-
-    // Obtener el ancho del div
     var main = document.getElementById("main");
     var posDerecho = main.getBoundingClientRect().right;
-
-    // Si la posición del último elemento supera el ancho de la ventana, mostrar "Game Over"
     if (pos.right + totalWidthElement >= posDerecho) {
       alert("Game Over");
       console.log(elements.length);
